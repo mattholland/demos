@@ -55,7 +55,7 @@ void clearShape(void);
 void setShape(int);
 void placeShape(void);
 void updateDisplay(WINDOW *win);
-void lineCheck();
+int lineCheck();
 
 
 //following array contains all rotations of each shape in a 4x4 matrix
