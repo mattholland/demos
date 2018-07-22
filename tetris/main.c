@@ -387,9 +387,9 @@ int moveShape(direction dir) {
 				}
 			}
 			if (!collision) {
-				mvprintw(0,0,"no collision was detected              ");
+				//mvprintw(0,0,"no collision was detected              ");
 				//getch();
-				mvprintw(0,0,"just before clearshape       ");
+				//mvprintw(0,0,"just before clearshape       ");
 				//getch();
 				clearShape();
 				//mvprintw(0,0,"exited clearShape             ");
@@ -538,10 +538,11 @@ int main(int argc, char *argv[]) {
 	for (int j = 2 ; j < HEIGHT+2 ; j++)
 		field[j][0] = field[j][1] = field[j][12] = wall; //set up the imaginary walls to make collision detection simpler
 	updateDisplay(win);
-	mvprintw(0,0,"Press any key to begin game");
+	mvprintw(0,0,"Press any key to begin game, use arrow keys to play");
 	refresh();
 	getch();	
-	//mvprintw(0,0,"");
+	mvprintw(0,0,"                                                    ");
+	refresh();
 
 	placeShape();
 	updateDisplay(win);
